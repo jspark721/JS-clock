@@ -1,49 +1,90 @@
 html {
-    background:#018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
-    background-size:cover;
-    font-family:'helvetica neue';
-    text-align: center;
-    font-size: 10px;
+  background: #c6d7f2 url(https://unsplash.it/1500/1000?image=961&blur);
+  background-size: cover;
+  font-family: 'helvetica neue';
+  text-align: center;
+  font-size: 10px;
 }
 
 body {
-    font-size: 2rem;
-    display:flex;
-    flex:1;
-    min-height: 100vh;
-    align-items: center;
+  font-size: 2rem;
+  display:flex;
+  flex:1;
+  min-height: 100vh;
+  align-items: center;
 }
 
 .clock {
-    width: 30rem;
-    height: 30rem;
-    border:20px solid white;
-    border-radius:50%;
-    margin:50px auto;
-    position: relative;
-    padding:2rem;
-    box-shadow:
-        0 0 0 4px rgba(0,0,0,0.1),
-        inset 0 0 0 3px #EFEFEF,
-        inset 0 0 10px black,
-        0 0 10px rgba(0,0,0,0.2);
+  width: 30rem;
+  height: 30rem;
+  border: 5px solid white; 
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 
+    0 0 0 4px rgba(0,0,0,0.1),
+    inset 0 0 0 3px #EFEFEF,
+    inset 0 0 0 10px #c6d7f2,
+    0 0 10px rgba(0,0,0,0.2);
+}
+
+.clock:after {
+  content: "";
+  width: 4%;
+  height: 4%;
+  background: #aaa;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -2% 0 0 -2%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: 0 1px 1px #444, inset 0 1px 1px #fff;
+  -webkit-box-shadow: 0 1px 1px #444, inset 0 1px 1px #fff;
+  box-shadow: 0 1px 1px #444, inset 0 1px 1px #fff;
 }
 
 .clock-face {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform: translateY(-3px); /* account for the height of the clock hands */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-5px);
 }
 
 .hand {
-    width:50%;
-    height:6px;
-    background:black;
-    position: absolute;
-    top:50%;
-    transform-origin: 100%; /* put the pivot point to the right hand side */
-    transform: rotate(90deg);
-    transition: all 0.05s;
-    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1.13);
+  width: 48%;
+  left: 2%;
+  height: 5px;
+  background: #FFFFFF;
+  position:absolute;
+  top:50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1.13);
+}
+
+.hour-hand {
+  height: 7px;
+  width: 27%;
+  left: 23%;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.min-hand {
+  height: 5px;
+  width: 40%;
+  left: 10%;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.second-hand {
+  height: 2px;
+  background: #c6d7f2;
 }
